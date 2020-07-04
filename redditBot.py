@@ -19,6 +19,9 @@ for comment in subreddit.steam.comments():
         word = comment.body.replace(keyphrase, '')
         try:
             # we get the data from another python file (webscraping)
+            theReply = "| Dates | Pollster | Sample | Approval | Results | Disapproval | Net Results \n"
+            spacing = ":-- | :--: | :--: | :--: | :--: | :--: | :--: | --: \n"
+            
             # the below is the format for reply
             comment.reply('')
             print('posted')
