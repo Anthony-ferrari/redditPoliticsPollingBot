@@ -37,11 +37,11 @@ def fivethirtyeight():
         netResult = netResultName + " " + netResultValue
 
 
-        newString += " | " + pollName + " | " + datePosted + " | " + pollster + " | " + sampleSize + " | " + sampleSizeType + " | " + approvePercent + " | " + disapprovePercent + " | " + netResult + " | \n"
+        newString = " | " + pollName + " | " + datePosted + " | " + pollster + " | " + sampleSize + " | " + sampleSizeType + " | " + approvePercent + " | " + disapprovePercent + " | " + netResult + " | \n"
         pollList.append(newString)
     return pollList
 
-fivethirtyeight()
+print(fivethirtyeight())
 
 # classes that matter:
 
