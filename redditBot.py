@@ -1,8 +1,11 @@
 import praw
+import os
 from webscrape538 import fivethirtyeight
 #reddit api login
-reddit = praw.Reddit(client_id = "k_jOB-RRBSIsxA",
-                    client_secret = "IAqcUz409vr9IIZNmzoOlaj_zG0",
+client_id=os.environ.get('client_id')
+client_secret=os.environ.get('client_secret')
+reddit = praw.Reddit(client_id=client_id,
+                    client_secret=client_secret,
                     username = 'amal25',
                     password = 'newredditbotPolls',
                     user_agent = 'pollsbot by /u/amal25')
@@ -31,8 +34,6 @@ for comment in subreddit.stream.comments():
             reply = "no polls at this time"
             comment.reply(reply)
             print('posted - no content')
-        # except:
-        #     print("You are requesting this too frequently.")
 
 
 

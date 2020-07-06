@@ -41,7 +41,7 @@ def fivethirtyeight():
         pollList.append(newString)
     return pollList
 
-print(fivethirtyeight())
+fivethirtyeight()
 
 # classes that matter:
 
