@@ -6,8 +6,8 @@ client_id=os.environ.get('client_id')
 client_secret=os.environ.get('client_secret')
 reddit = praw.Reddit(client_id=client_id,
                     client_secret=client_secret,
-                    username = 'amal25',
-                    password = 'newredditbotPolls',
+                    username = username,
+                    password = password,
                     user_agent = 'pollsbot by /u/amal25')
 # the subreddits you want your bot to live on
 subreddit = reddit.subreddit('politics')
